@@ -22,24 +22,6 @@ This project demonstrates deploying a static website to AWS S3 using Terraform f
 - **CloudFront Distribution**: Serves the website globally with HTTPS and caching.
 - **Automation**: Scripts handle uploading files to S3 and invalidating CloudFront cache.
 - **Version Control**: Git commits and pushes changes to the remote repository.
-
----
-
-## Project Structure
-
-aws_infra/
-│
-├─ main.tf # Terraform configuration file for AWS resources
-├─ scripts/
-│ ├─ deploy.sh # Uploads files to S3 and invalidates CloudFront
-│ └─ destroy.sh # Destroys all provisioned resources
-├─ public/
-│ ├─ index.html # Static website files
-│ └─ about.html
-└─ README.md # Project documentation
-
-text
-
 ---
 
 ## Workflow Diagram
@@ -47,7 +29,6 @@ text
 <img width="2048" height="2048" alt="image" src="https://github.com/user-attachments/assets/280f84b6-881f-4e8e-b1e7-b82384b5b730" />
 
 
-text
 
 This diagram shows the full workflow: commit files → push to GitHub → Terraform provisions AWS infrastructure → S3 stores website → CloudFront distributes content globally.
 
@@ -60,12 +41,10 @@ This diagram shows the full workflow: commit files → push to GitHub → Terraf
 Initialize Terraform:
 terraform init
 
-text
 
 Apply the Terraform configuration:
 terraform apply -auto-approve
 
-text
 
 ---
 
@@ -74,7 +53,6 @@ text
 Use the deployment script to upload files to S3 and invalidate CloudFront cache:
 ./scripts/deploy.sh
 
-text
 
 ---
 
@@ -83,27 +61,21 @@ text
 Stage files for commit:
 git add public/index.html public/about.html main.tf scripts/deploy.sh scripts/destroy.sh
 
-text
 
 Commit the changes:
 git commit -m "Add static website files and deployment scripts"
 
-text
 
 Pull latest changes from remote to avoid conflicts:
 git pull origin main --rebase
 
-text
 
 Push changes to remote repository:
 git push origin main
 
-text
 
 > ⚡ **Tip**: If your local branch is behind and you want to overwrite the remote branch:
 git push origin main --force
-
-text
 
 ---
 
@@ -120,6 +92,3 @@ text
 
 To destroy all provisioned resources:
 ./scripts/destroy.sh
-
-text
-undefined
