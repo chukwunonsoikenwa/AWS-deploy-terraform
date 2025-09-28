@@ -11,7 +11,7 @@ This project demonstrates deploying a static website to AWS S3 using Terraform f
 - **S3 Bucket**: Hosts static website files.
 - **CloudFront Distribution**: Serves the website globally with HTTPS and caching.
 - **Automation**: Scripts handle uploading files to S3 and invalidating CloudFront cache.
-- **Version Control**: Git is used to commit and push changes to the remote repository.
+- **Version Control**: Git commits and pushes changes to the remote repository.
 
 ---
 
@@ -21,7 +21,7 @@ This project demonstrates deploying a static website to AWS S3 using Terraform f
 - **S3 Bucket**: Hosts static website files.
 - **CloudFront Distribution**: Serves the website globally with HTTPS and caching.
 - **Automation**: Scripts handle uploading files to S3 and invalidating CloudFront cache.
-- **Version Control**: Git is used to commit and push changes to the remote repository.
+- **Version Control**: Git commits and pushes changes to the remote repository.
 
 ---
 
@@ -44,12 +44,8 @@ text
 
 ## Workflow Diagram
 
-flowchart LR
-Git[Local Git Repo] --> |Commit & Push| GitHub[Remote Git Repository]
-GitHub --> |Trigger Deployment Script| Terraform[Terraform Scripts]
-Terraform --> |Provision| S3[S3 Bucket]
-S3 --> |Serve Content| CloudFront[CloudFront Distribution]
-CloudFront --> |Global Access| Users[Website Users]
+<img width="2048" height="2048" alt="image" src="https://github.com/user-attachments/assets/280f84b6-881f-4e8e-b1e7-b82384b5b730" />
+
 
 text
 
